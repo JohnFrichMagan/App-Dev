@@ -1,9 +1,9 @@
 {
-  "name": "it35-lab",
+  "name": "App-Dev",
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "homepage": "https://johnfrichmagan.github.io/it35-lab/",
+  "homepage": "https://johnfrichmagan.github.io/App-Dev/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",

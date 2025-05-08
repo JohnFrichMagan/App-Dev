@@ -45,7 +45,7 @@ import {
   
       setShowToast(true); 
       setTimeout(() => {
-        navigation.push('/it35-lab/app', 'forward', 'replace');
+        navigation.push('/App-Dev/app', 'forward', 'replace');
       }, 300);
     };
     
@@ -104,7 +104,7 @@ import {
             Login
           </IonButton>
   
-          <IonButton routerLink="/it35-lab/register" expand="full" fill="clear" shape='round'>
+          <IonButton routerLink="/App-Dev/register" expand="full" fill="clear" shape='round'>
             Don't have an account? Register here
           </IonButton>
   

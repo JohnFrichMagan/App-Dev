@@ -25,7 +25,7 @@ const Favorites: React.FC = () => {
   // Function to handle logout
   const handleLogout = () => {
     localStorage.removeItem('user'); // Clear session data
-    router.push('/it35-lab/login', 'forward', 'replace'); // Redirect to login page
+    router.push('/App-Dev/login', 'forward', 'replace'); // Redirect to login page
   };
 
   useEffect(() => {

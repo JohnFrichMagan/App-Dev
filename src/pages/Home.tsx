@@ -27,19 +27,19 @@ const Home: React.FC = () => {
     {
       name: 'SecurityQuiz',
       tab: 'securityquiz',
-      url: '/it35-lab/app/home/securityquiz',
+      url: '/App-Dev/app/home/securityquiz',
       icon: shieldCheckmarkOutline,
     },
     {
       name: 'Search',
       tab: 'search',
-      url: '/it35-lab/app/home/search',
+      url: '/App-Dev/app/home/search',
       icon: search,
     },
     {
       name: 'Favorites',
       tab: 'favorites',
-      url: '/it35-lab/app/home/favorites',
+      url: '/App-Dev/app/home/favorites',
       icon: radioButtonOnOutline,
     },
   ];
@@ -60,13 +60,13 @@ const Home: React.FC = () => {
           <IonRouterOutlet>
             <Route
               exact
-              path="/it35-lab/app/home/securityquiz"
+              path="/App-Dev/app/home/securityquiz"
               component={SecurityQuiz}
             />
-            <Route exact path="/it35-lab/app/home/search" component={Search} />
-            <Route exact path="/it35-lab/app/home/favorites" component={Favorites} />
-            <Route exact path="/it35-lab/app/home">
-              <Redirect to="/it35-lab/app/home/securityquiz" />
+            <Route exact path="/App-Dev/app/home/search" component={Search} />
+            <Route exact path="/App-Dev/app/home/favorites" component={Favorites} />
+            <Route exact path="/App-Dev/app/home">
+              <Redirect to="/App-Dev/app/home/securityquiz" />
             </Route>
           </IonRouterOutlet>
 

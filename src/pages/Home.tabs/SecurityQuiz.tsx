@@ -223,7 +223,7 @@ import {
     };
   
     const viewScore = () => {
-      history.push('/it35-lab/app/home/favorites'); // Correct route path
+      history.push('/App-Dev/app/home/favorites'); // Correct route path
     };
   
     return (

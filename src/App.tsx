@@ -36,17 +36,17 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         {/* Existing routes */}
-        <Route exact path="/it35-lab" component={Login} />
-        <Route exact path="/it35-lab/register" component={Register} />
-        <Route path="/it35-lab/app" component={Menu} />
+        <Route exact path="/App-Dev" component={Login} />
+        <Route exact path="/App-Dev/register" component={Register} />
+        <Route path="/App-Dev/app" component={Menu} />
 
 
         {/* ✅ New Security Quiz Route */}
-        <Route exact path="/it35-lab/quiz" component={SecurityQuiz} />
+        <Route exact path="/App-Dev/quiz" component={SecurityQuiz} />
         
 
         {/* Optional redirect */}
-        <Redirect exact from="/" to="/it35-lab/quiz" />
+        <Redirect exact from="/" to="/App-Dev/quiz" />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

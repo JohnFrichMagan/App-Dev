@@ -23,8 +23,8 @@ import {
 
     const Menu: React.FC = () => {
         const path = [
-            {name:'Home', url: '/it35-lab/app/home', icon: homeOutline},
-            {name:'About', url: '/it35-lab/app/about', icon: rocketOutline},
+            {name:'Home', url: '/App-Dev/app/home', icon: homeOutline},
+            {name:'About', url: '/App-Dev/app/about', icon: rocketOutline},
         ]
         
         return (
@@ -56,12 +56,12 @@ import {
                 </IonMenu>
 
                 <IonRouterOutlet id="main">
-                <Route exact path="/it35-lab/app/home" component={Home} />
-                <Route exact path="/it35-lab/app/about" component={About} />
-                <Route exact path="/it35-lab/app/home/details" component={Details} />
+                <Route exact path="/App-Dev/app/home" component={Home} />
+                <Route exact path="/App-Dev/app/about" component={About} />
+                <Route exact path="/App-Dev/app/home/details" component={Details} />
 
-                    <Route exact path="/it35-lab/app">
-                    <Redirect to="/it35-lab/app/home"/>
+                    <Route exact path="/App-Dev/app">
+                    <Redirect to="/App-Dev/app/home"/>
                     </Route>
                 </IonRouterOutlet>
                 
