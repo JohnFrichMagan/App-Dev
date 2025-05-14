@@ -48,7 +48,7 @@ import {
                             </IonMenuToggle>
                         ))}
                         {/*Logout Button*/}
-                        <IonButton routerLink="/it35-lab" routerDirection="back" expand="full">
+                        <IonButton routerLink="/App-Dev" routerDirection="back" expand="full">
                             <IonIcon icon={logOutOutline} slot="start"> </IonIcon>
                         Logout
                         </IonButton>

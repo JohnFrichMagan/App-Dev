@@ -1,5 +1,8 @@
+import React from 'react';
 import {
+  IonButton,
   IonButtons,
+  IonContent,
   IonHeader,
   IonIcon,
   IonLabel,
@@ -11,16 +14,19 @@ import {
   IonTabs,
   IonTitle,
   IonToolbar,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle
 } from '@ionic/react';
+
 import { IonReactRouter } from '@ionic/react-router';
-import { shieldCheckmarkOutline , radioButtonOnOutline, search, star } from 'ionicons/icons';
+import { bookOutline, star } from 'ionicons/icons';
 import { Route, Redirect } from 'react-router-dom';
 
-
-import Favorites from './Home.tabs/Favorite';
+import Scores from './Home.tabs/Scores';
 import SecurityQuiz from './Home.tabs/SecurityQuiz';
-import Search from './Home.tabs/Search';
-import React from 'react';
 
 const Home: React.FC = () => {
   const tabs = [
@@ -28,58 +34,36 @@ const Home: React.FC = () => {
       name: 'SecurityQuiz',
       tab: 'securityquiz',
       url: '/App-Dev/app/home/securityquiz',
-      icon: shieldCheckmarkOutline,
+      icon: bookOutline
     },
     {
-      name: 'Search',
-      tab: 'search',
-      url: '/App-Dev/app/home/search',
-      icon: search,
-    },
-    {
-      name: 'Favorites',
-      tab: 'favorites',
-      url: '/App-Dev/app/home/favorites',
-      icon: radioButtonOnOutline,
-    },
+      name: 'Scores',
+      tab: 'scores',
+      url: '/App-Dev/app/home/scores',
+      icon: star
+    }
   ];
 
   return (
     <IonReactRouter>
-      <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <IonButtons slot="start">
-              <IonMenuButton />
-            </IonButtons>
-            <IonTitle>Home</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+      <IonTabs>
+        <IonRouterOutlet>
+          <Route exact path="/App-Dev/app/home/securityquiz" component={SecurityQuiz} />
+          <Route exact path="/App-Dev/app/home/scores" component={Scores} />
+          <Route exact path="/App-Dev/app/home">
+            <Redirect to="/App-Dev/app/home/securityquiz" />
+          </Route>
+        </IonRouterOutlet>
 
-        <IonTabs>
-          <IonRouterOutlet>
-            <Route
-              exact
-              path="/App-Dev/app/home/securityquiz"
-              component={SecurityQuiz}
-            />
-            <Route exact path="/App-Dev/app/home/search" component={Search} />
-            <Route exact path="/App-Dev/app/home/favorites" component={Favorites} />
-            <Route exact path="/App-Dev/app/home">
-              <Redirect to="/App-Dev/app/home/securityquiz" />
-            </Route>
-          </IonRouterOutlet>
-
-          <IonTabBar slot="bottom">
-            {tabs.map((item, index) => (
-              <IonTabButton key={index} tab={item.tab} href={item.url}>
-                <IonIcon icon={item.icon} />
-                <IonLabel>{item.name}</IonLabel>
-              </IonTabButton>
-            ))}
-          </IonTabBar>
-        </IonTabs>
-      </IonPage>
+        <IonTabBar slot="bottom">
+          {tabs.map((item, index) => (
+            <IonTabButton key={index} tab={item.tab} href={item.url}>
+              <IonIcon icon={item.icon} />
+              <IonLabel>{item.name}</IonLabel>
+            </IonTabButton>
+          ))}
+        </IonTabBar>
+      </IonTabs>
     </IonReactRouter>
   );
 };

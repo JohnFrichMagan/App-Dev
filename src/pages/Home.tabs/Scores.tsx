@@ -16,7 +16,7 @@ import { logOutOutline } from 'ionicons/icons';
 import { useState, useEffect } from 'react';
 import { useIonRouter } from '@ionic/react'; // Import router for navigation
 
-const Favorites: React.FC = () => {
+const Scores: React.FC = () => {
   const [attempts, setAttempts] = useState<any[]>([]);
   const [showAlert, setShowAlert] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -25,7 +25,7 @@ const Favorites: React.FC = () => {
   // Function to handle logout
   const handleLogout = () => {
     localStorage.removeItem('user'); // Clear session data
-    router.push('/App-Dev/login', 'forward', 'replace'); // Redirect to login page
+    router.push('/App-Dev/-/login', 'forward', 'replace'); // Redirect to login page
   };
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const Favorites: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle className="colorful-title">🌟 Favorites</IonTitle>
+          <IonTitle className="colorful-title">🌟 Scores</IonTitle>
           <IonButtons slot="end">
             {/* Logout Button */}
             <IonButton onClick={handleLogout} expand="full" shape="round" color="medium">
@@ -122,4 +122,4 @@ const Favorites: React.FC = () => {
   );
 };
 
-export default Favorites;
+export default Scores;
